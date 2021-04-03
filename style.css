@@ -1,0 +1,46 @@
+body {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #052158;
+    color: white;
+    margin: 0; 
+    padding: 0; 
+}
+
+div.page-banner {
+    background-image: url(img/nature-2813487_1920.jpg);
+    background-position: 0 -60%; 
+    height: 175px;
+}
+
+nav.main-nav {
+    background-color: #FFD200;
+    font-size: 0;
+}
+
+ul.nav-list li {
+    display: inline-block;
+    position: relative;
+    list-style-type: none; 
+    width: 15vw;
+    line-height: 40px;
+    font-size: 16px;
+    text-shadow: 0px 0px 5px black;
+    cursor: pointer; 
+}
+
+ul.nav-list li:hover {
+    background-color: #DDC100;
+}
+
+ul.nav-sublist {
+    display: none;
+    position: absolute; 
+    background-color: #FFD200;
+    font-size: 16px;
+    padding: 0; 
+}
+
+ul.nav-list li:hover ul.nav-sublist {
+    display: block;
+}
