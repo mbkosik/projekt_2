@@ -4,6 +4,7 @@
 }
 
 body {
+    height: 200vh;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #052158;
@@ -16,6 +17,15 @@ div.page-banner {
     background-position: 0 -60%; 
     height: 175px;
 }
+
+div.toggle {
+    display: none; 
+}
+
+/* nav.main-nav {
+    position: fixed;
+    width: 100%; 
+} */
 
 /* FLEX - DROPDOWN MENU */
 
@@ -51,3 +61,40 @@ ul.nav-list li:hover ul.nav-sublist li {
 li:hover {
     background-color: #DDC100; 
 }
+
+/* MOBILE MENU  */
+
+@media (max-width: 500px) {
+    ul.nav-list {
+        flex-direction: column; 
+        height: auto;
+        width: 100%; 
+        position: absolute; 
+        top: 0; 
+        left: 0;
+        display: none;
+    }
+
+    .active {
+        display: flex !important; 
+    }
+
+    div.toggle {
+        display: block;
+        position: absolute; 
+        top: 0; 
+        left: 0;
+        cursor: pointer; 
+        color:#052158; 
+        padding: 5px; 
+        font-size: 24px; 
+        z-index: 2; 
+    }
+
+    div.toggle:hover {
+        color: white;
+    }
+
+}
+
+
