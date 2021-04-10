@@ -22,10 +22,6 @@ div.toggle {
     display: none; 
 }
 
-/* nav.main-nav {
-    position: fixed;
-    width: 100%; 
-} */
 
 /* FLEX - DROPDOWN MENU */
 
@@ -65,8 +61,7 @@ li:hover {
 /* MOBILE MENU  */
 
 @media (max-width: 500px) {
-    ul.nav-list {
-        flex-direction: column; 
+    ul.nav-list { 
         height: auto;
         width: 100%; 
         position: absolute; 
@@ -75,8 +70,13 @@ li:hover {
         display: none;
     }
 
+    ul.nav-list li:hover ul.nav-sublist {
+        display: none; 
+    }
+
     .active {
         display: flex !important; 
+        flex-direction: column;
     }
 
     div.toggle {
