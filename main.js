@@ -9,14 +9,11 @@ toggleBars.addEventListener("click", () => {
 })
 
 if(window.innerWidth <= 500) {
-    dropdownElement[0].addEventListener("click", () => {            navSubList[0].classList.toggle("active"); 
-    console.log(navSubList[0]);
-    })
-
-    dropdownElement[1].addEventListener("click", () => {
-    navSubList[1].classList.toggle("active"); 
-    console.log(navSubList[1]);
-    })
+    for (let i=0; i<=dropdownElement.length;i++) {
+        dropdownElement[i].addEventListener("click", () => {
+            navSubList[i].classList.toggle("active"); 
+        })
+    }
 }
 
 
