@@ -16,6 +16,32 @@ if(window.innerWidth <= 500) {
     }
 }
 
+// FORMULARZ
+
+const btnSubmit = document.querySelector("button");
+
+btnSubmit.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("name");
+    const phoneNumber = document.getElementById("phone-number");
+    const email = document.getElementById("email");
+
+    alert(`${name.value}, ${phoneNumber.value}, ${email.value}`); 
+})
+
+$(document).on("scroll", () => {
+    const windowHeight = $(window).height();
+    const scrollValue = $(this).scrollTop();
+    const $btnSubmit = $('button');
+
+    const $btnFromTop = $btnSubmit.offset().top;
+    const $btnHeight = $btnSubmit.height();
+
+    if (scrollValue > $btnFromTop + $btnHeight - windowHeight) {
+        $btnSubmit.addClass('active');
+    }
+})
 
 
 

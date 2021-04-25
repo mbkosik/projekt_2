@@ -1,3 +1,9 @@
+:root {
+    --blue: #052158;
+    --yellowOne: #FFD200;
+    --yellowTwo: #DDC100; 
+}
+
 * {
     padding: 0; 
     margin: 0; 
@@ -7,7 +13,7 @@ body {
     height: 200vh;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #052158;
+    background-color: var(--blue);
     color: white;
     font-size: 16px;
 }
@@ -24,7 +30,7 @@ div.toggle {
 
 h2 {
     margin: 10px 0; 
-    text-shadow: 1px 1px #FFD200;
+    text-shadow: 1px 1px var(--yellowOne);
     font-size: 28px;
     font-weight: 700; 
 }
@@ -33,7 +39,7 @@ h2 {
 /* FLEX - DROPDOWN MENU */
 
 ul.nav-list {
-    background-color: #FFD200;
+    background-color: var(--yellowOne);
     display: flex; 
     justify-content: center; 
     height: 40px; 
@@ -56,7 +62,7 @@ ul.nav-sublist {
 ul.nav-list li:hover ul.nav-sublist {
     display: flex; 
     flex-direction: column; 
-    background-color: #FFD200;
+    background-color: var(--yellowOne);
 }
 
 ul.nav-list li:hover ul.nav-sublist li { 
@@ -64,7 +70,7 @@ ul.nav-list li:hover ul.nav-sublist li {
 }
 
 li:hover {
-    background-color: #DDC100; 
+    background-color: var(--yellowTwo); 
 }
 
 /* MOBILE MENU  */
@@ -94,7 +100,7 @@ li:hover {
         top: 0; 
         left: 0;
         cursor: pointer; 
-        color:#052158; 
+        color: var(--blue); 
         padding: 5px; 
         font-size: 24px; 
         z-index: 2; 
@@ -121,7 +127,7 @@ div.gallery {
 .flex-img {
     width: 100%;
     height: 100%;
-    border: 1px solid #DDC100;
+    border: 1px solid var(--yellowTwo);
     border-radius: 8px;
 }
 
@@ -151,7 +157,7 @@ div.gallery {
     left: 50%;
     transform: translateX(-50%);
     margin: 10px; 
-    background-color: #DDC100;
+    background-color: var(--yellowTwo);
     border: 1px solid black;
     border-radius: 8px;
     cursor: default;
@@ -162,7 +168,7 @@ div.gallery {
     position: absolute; 
     width: 20vw;
     background-color: gray;
-    border: 1px solid #DDC100;
+    border: 1px solid var(--yellowTwo);
     border-radius: 8px; 
     padding: 5px;
 }
@@ -170,6 +176,71 @@ div.gallery {
 .tooltip:hover .tooltip-text {
     visibility: visible; 
 }
+
+/* FORMULARZ */
+
+form {
+    text-align: left; 
+    padding: 20px; 
+}
+
+form button {
+    display: block; 
+    margin-top: 20px; 
+    padding: 10px; 
+    font-size: 26px; 
+    line-height: 52px;
+    background-color: var(--yellowTwo);  
+    color: white; 
+    border: unset;
+    cursor: pointer; 
+    margin-left: -300px; 
+}
+
+form button:hover {
+    background-color: white;
+    color: var(--yellowTwo); 
+}
+
+form button.active {
+    animation: move 0.8s ease-out forwards;
+}
+
+@keyframes move {
+    70% {
+        margin-left: 10px; 
+    }
+
+    80% {
+        margin-left: 0;
+    }
+
+    90% {
+        margin-left: 10px; 
+    }
+
+    100% {
+        margin-left: 0; 
+    }
+}
+
+input {
+    display: block;
+    width: 30vw; 
+    height: 20px; 
+    margin: 10px 0; 
+}
+
+input[type='checkbox'] {
+    display: inline; 
+    width: auto;
+    margin: 5px; 
+}
+
+label {
+    text-shadow: 1px 1px var(--yellowOne);
+}
+
 
 
 
